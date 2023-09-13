@@ -19,8 +19,12 @@ class BMICalculator extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(
             backgroundColor: Color(0xFF1D1F33),
+           // backgroundColor: Color(0xFF111428),
           ),
-      ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Color(0xFF1C1F32),
+        ),
       ),
       home: InputPage(),
     );
