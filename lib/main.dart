@@ -27,7 +27,7 @@ class BMICalculator extends StatelessWidget {
           backgroundColor: Color(0xFF1C1F32),
         ),
       ),
-      home: OutputPage(),//InputPage(),
+      home: InputPage(),
     );
   }
 }

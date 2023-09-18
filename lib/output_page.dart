@@ -43,7 +43,7 @@ class _OutputPageState extends State<OutputPage> {
                 ),
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 33, horizontal: 43),
+                  const EdgeInsets.symmetric(vertical: 33, horizontal: 43),
                   child: Column(
                     children: <Widget>[
                       Text(
@@ -112,16 +112,16 @@ class _OutputPageState extends State<OutputPage> {
                             color:  Color(0xFF181A2E),
                           ),
                           child: TextButton(
-                              onPressed: (){},
-                              child: Text("SAVE RESULT",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  letterSpacing: 2,
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                            onPressed: (){},
+                            child: Text("SAVE RESULT",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                letterSpacing: 2,
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
                               ),
+                            ),
                           ),
                         ),
                       ),
