@@ -19,48 +19,45 @@ class _InputPageState extends State<InputPage> {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(25),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              flex: 2,
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: ReuseableCard(hexColor: Color(0xFF1D1E33)),
-                  ),
-                  Expanded(
-                    child: ReuseableCard(hexColor: Color(0xFF1D1E33)),
-                  ),
-                ],
-              ),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 5,
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: ReuseableCard(hexColor: Color(0xFF1D1E33)),
+                ),
+                Expanded(
+                  child: ReuseableCard(hexColor: Color(0xFF1D1E33)),
+                ),
+              ],
             ),
-            SizedBox(
-              height: 15,
+          ),
+          Expanded(
+            flex: 6,
+            child: ReuseableCard(hexColor: Color(0xFF111428)),
+          ),
+          Expanded(
+            flex: 7,
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: ReuseableCard(hexColor: Color(0xFF111428)),
+                ),
+                Expanded(
+                  child: ReuseableCard(hexColor: Color(0xFF111428)),
+                ),
+              ],
             ),
-            Expanded(
-              flex: 3,
-              child: ReuseableCard(hexColor: Color(0xFF111428)),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Expanded(
-              flex: 3,
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: ReuseableCard(hexColor: Color(0xFF111428)),
-                  ),
-                  Expanded(
-                    child: ReuseableCard(hexColor: Color(0xFF111428)),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+          ),
+          Container(
+            color: Color(0xFFEB1555),
+            margin: EdgeInsets.only(top: 25),
+            height: 50,
+            width: double.infinity,
+          ),
+        ],
       ),
     );
   }
@@ -74,7 +71,7 @@ class ReuseableCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(2),
+      margin: EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: hexColor,
         borderRadius: BorderRadius.circular(4),
