@@ -1,4 +1,11 @@
+import 'package:bmi/input_page.dart';
 import 'package:flutter/material.dart';
+
+const genderCardColor = Color(0xFF1D1E33);
+const activeCardColor = Color(0xFF111428);
+const bottomButtonColor = Color(0xFFEB1555);
+
+
 
 class InputPage extends StatefulWidget {
   @override
@@ -22,38 +29,35 @@ class _InputPageState extends State<InputPage> {
       body: Column(
         children: <Widget>[
           Expanded(
-            flex: 5,
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ReuseableCard(hexColor: Color(0xFF1D1E33)),
+                  child: ReuseableCard(hexColor: genderCardColor),
                 ),
                 Expanded(
-                  child: ReuseableCard(hexColor: Color(0xFF1D1E33)),
+                  child: ReuseableCard(hexColor: genderCardColor),
                 ),
               ],
             ),
           ),
           Expanded(
-            flex: 6,
-            child: ReuseableCard(hexColor: Color(0xFF111428)),
+            child: ReuseableCard(hexColor: activeCardColor),
           ),
           Expanded(
-            flex: 7,
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: ReuseableCard(hexColor: Color(0xFF111428)),
+                  child: ReuseableCard(hexColor: activeCardColor),
                 ),
                 Expanded(
-                  child: ReuseableCard(hexColor: Color(0xFF111428)),
+                  child: ReuseableCard(hexColor: activeCardColor),
                 ),
               ],
             ),
           ),
           Container(
-            color: Color(0xFFEB1555),
-            margin: EdgeInsets.only(top: 25),
+            color: bottomButtonColor,
+            margin: EdgeInsets.only(top: 15),
             height: 50,
             width: double.infinity,
           ),
@@ -71,10 +75,10 @@ class ReuseableCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.all(13),
       decoration: BoxDecoration(
         color: hexColor,
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(10),
       ),
     );
   }
