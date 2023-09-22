@@ -16,25 +16,28 @@ class genderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Transform.rotate(
-          angle: angleValue,
-          child: icon,
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        Text(
-          title,
-          style: TextStyle(
-              letterSpacing: 1,
-              fontWeight: FontWeight.bold,
-              fontSize: 15,
-              color: coloring
+    return Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: Column(
+        children: <Widget>[
+          Transform.rotate(
+            angle: angleValue,
+            child: icon,
           ),
-        ),
-      ],
+          SizedBox(
+            height: 8,
+          ),
+          Text(
+            title,
+            style: TextStyle(
+                letterSpacing: 1,
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+                color: coloring
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

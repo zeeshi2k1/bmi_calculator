@@ -4,7 +4,7 @@ class ReuseableCard extends StatelessWidget {
 
   ReuseableCard({
     required this.hexColor,
-    required this.childCard
+    required this.childCard,
   });
 
   final Color hexColor;
