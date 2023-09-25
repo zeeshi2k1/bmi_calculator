@@ -17,7 +17,6 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
 
   Gender genderInput = Gender.male;
-  int height = 183;
 
   @override
   Widget build(BuildContext context) {
@@ -107,9 +106,27 @@ class _InputPageState extends State<InputPage> {
                       ),
                     ],
                   ),
-                  Slider(
-                      value: height.toDouble(),
-                      onChanged: ),
+                  SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      trackHeight: kTrackHeight,
+                      activeTrackColor: kActiveColor,
+                      inactiveTrackColor: kInactiveColor,
+                      thumbColor: kPinkColor,
+                      overlayColor: kPinkColor.withOpacity(kOverlayOpacity),
+                      overlayShape: RoundSliderOverlayShape(overlayRadius: kOverlayRadius),
+                    ),
+                    child: Slider(
+                        value: height.toDouble(),
+                        min: kMin,
+                        max: kMax,
+                        label: '$height',
+                        onChanged: (double newValue){
+                          setState(() {
+                            height = newValue.round();
+                          });
+                        },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -120,20 +137,20 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReuseableCard(
                     hexColor: kCardColor,
-                    childCard: cardInDe(title: "WEIGHT", value: "74",),
+                    childCard: cardInDe(title: "WEIGHT", value: weight),
                   ),
                 ),
                 Expanded(
                   child: ReuseableCard(
                     hexColor: kCardColor,
-                    childCard: cardInDe(title: "AGE", value: "19",),
+                    childCard: cardInDe(title: "AGE", value: age),
                   ),
                 ),
               ],
             ),
           ),
           Container(
-            color: kBottomButtonColor,
+            color: kPinkColor,
             margin: EdgeInsets.only(top: 15),
             height: 50,
             width: double.infinity,

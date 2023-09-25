@@ -6,8 +6,15 @@ class cardInDe extends StatelessWidget {
   cardInDe({required this.title, required this.value});
 
   final String title;
-  final String value;
+  int value;
 
+  void decrement(){
+    value = value - 1;
+  }
+
+  void increment(){
+    value = value + 1;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +26,7 @@ class cardInDe extends StatelessWidget {
           style: kTitleStyle,
         ),
         Text(
-          value,
+          value.toString(),
           style: kValueStyle,
         ),
         Row(
@@ -29,7 +36,7 @@ class cardInDe extends StatelessWidget {
               height: 40,
               width: 40,
               child: FloatingActionButton(
-                onPressed: () {},
+                onPressed: decrement,
                 child: Icon(
                   Icons.remove,
                   color: Color(0xFFAEAFB5),
@@ -43,7 +50,7 @@ class cardInDe extends StatelessWidget {
               height: 40,
               width: 40,
               child: FloatingActionButton(
-                onPressed: () {},
+                onPressed: increment,
                 child: Icon(
                   Icons.add,
                   color: Color(0xFFAEAFB5),
@@ -56,3 +63,4 @@ class cardInDe extends StatelessWidget {
     );
   }
 }
+
