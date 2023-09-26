@@ -13,6 +13,7 @@ final double kTrackHeight = 1;
 int height = 183;
 int weight = 74;
 int age = 19;
+double bmi = 0;
 
 
 const kTitleStyle = TextStyle(
