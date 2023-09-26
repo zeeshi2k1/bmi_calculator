@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
-class cardInDe extends StatelessWidget {
-
+class cardInDe extends StatefulWidget {
   cardInDe({required this.title, required this.value});
-
   final String title;
   int value;
+  @override
+  State<cardInDe> createState() => _cardInDeState(title: title, value: value);
+}
 
-  void decrement(){
-    value = value - 1;
-  }
-
-  void increment(){
-    value = value + 1;
-  }
-
+class _cardInDeState extends State<cardInDe> {
+  _cardInDeState({required this.title, required this.value});
+  final String title;
+  int value;
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
@@ -36,7 +33,13 @@ class cardInDe extends StatelessWidget {
               height: 40,
               width: 40,
               child: FloatingActionButton(
-                onPressed: decrement,
+                onPressed: () {
+                  setState(() {
+                    if (value > 0) {
+                      value--;
+                    }
+                  });
+                },
                 child: Icon(
                   Icons.remove,
                   color: Color(0xFFAEAFB5),
@@ -50,7 +53,11 @@ class cardInDe extends StatelessWidget {
               height: 40,
               width: 40,
               child: FloatingActionButton(
-                onPressed: increment,
+                onPressed: () {
+                  setState(() {
+                    value++;
+                  });
+                },
                 child: Icon(
                   Icons.add,
                   color: Color(0xFFAEAFB5),
@@ -63,4 +70,3 @@ class cardInDe extends StatelessWidget {
     );
   }
 }
-
