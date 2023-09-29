@@ -23,3 +23,81 @@ const kTitleStyle = TextStyle(
 const kValueStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 40,);
+
+
+class kCalButton extends StatefulWidget {
+
+  kCalButton({required this.title, required this.onPressed});
+
+  final String title;
+  final Function onPressed;
+
+  @override
+  State<kCalButton> createState() => _kCalButtonState(title: title, onPressed: onPressed);
+}
+
+class _kCalButtonState extends State<kCalButton> {
+  _kCalButtonState({required this.title, required this.onPressed});
+
+  final String title;
+  final Function onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+      setState(() {
+        onPressed();
+      });
+      },
+      child: Container(
+        color: kPinkColor,
+        margin: EdgeInsets.only(top: 15),
+        height: 50,
+        width: double.infinity,
+        child: Center(
+          child: Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              letterSpacing: 2,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+// setState(() {
+// double heightmeter = height/100;
+// bmi = weight / (heightmeter * heightmeter);
+// Navigator.pushNamed(context, '/result');
+// });
+//
+// GestureDetector(
+// onTap: () {
+// setState(() {
+// double heightmeter = height/100;
+// bmi = weight / (heightmeter * heightmeter);
+// Navigator.pushNamed(context, '/result');
+// });
+// },
+// child: Container(
+// color: kPinkColor,
+// margin: EdgeInsets.only(top: 15),
+// height: 50,
+// width: double.infinity,
+// child: Center(
+// child: Text(
+// "CALCULATE YOUR BMI",
+// style: TextStyle(
+// color: Colors.white,
+// letterSpacing: 2,
+// ),
+// ),
+// ),
+// ),
+// ),

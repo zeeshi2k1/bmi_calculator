@@ -149,29 +149,13 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                double heightmeter = height/100;
+          kCalButton(
+              title: "CALCULATE YOUR BMI",
+              onPressed: () {
+                double heightmeter = height / 100;
                 bmi = weight / (heightmeter * heightmeter);
                 Navigator.pushNamed(context, '/result');
-              });
-            },
-            child: Container(
-              color: kPinkColor,
-              margin: EdgeInsets.only(top: 15),
-              height: 50,
-              width: double.infinity,
-              child: Center(
-                child: Text(
-                  "CALCULATE YOUR BMI",
-                  style: TextStyle(
-                    color: Colors.white,
-                    letterSpacing: 2,
-                  ),
-                ),
-              ),
-            ),
+              }
           ),
         ],
       ),
