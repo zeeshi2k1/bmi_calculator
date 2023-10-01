@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'variables.dart';
-import 'bottom_button.dart';
+import '../Data/variables.dart';
+import '../Components/bottom_button.dart';
 
 class OutputPage extends StatefulWidget {
   @override

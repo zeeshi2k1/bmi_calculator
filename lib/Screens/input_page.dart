@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'reuseable_card.dart';
-import 'gender_card.dart';
-import 'increase_decrease_card.dart';
-import 'constants.dart';
-import 'variables.dart';
-import 'calculation_operation.dart';
-import 'bottom_button.dart';
+import '../Components/reuseable_card.dart';
+import '../Components/gender_card.dart';
+import '../Components/increase_decrease_card.dart';
+import '../Data/constants.dart';
+import '../Data/variables.dart';
+import '../Data/calculation_operation.dart';
+import '../Components/bottom_button.dart';
 
 enum Gender{
   male,

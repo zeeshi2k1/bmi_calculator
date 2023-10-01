@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'variables.dart';
+import '../Data/constants.dart';
+import '../Data/variables.dart';
 
 class cardInDe extends StatefulWidget {
 
