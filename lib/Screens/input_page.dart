@@ -3,6 +3,9 @@ import 'reuseable_card.dart';
 import 'gender_card.dart';
 import 'increase_decrease_card.dart';
 import 'constants.dart';
+import 'variables.dart';
+import 'calculation_operation.dart';
+import 'bottom_button.dart';
 
 enum Gender{
   male,
@@ -149,11 +152,11 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          kCalButton(
+          bottomButton(
               title: "CALCULATE YOUR BMI",
               onPressed: () {
-                double heightmeter = height / 100;
-                bmi = weight / (heightmeter * heightmeter);
+                Calculation cal = Calculation();
+                cal.checkBMI();
                 Navigator.pushNamed(context, '/result');
               }
           ),

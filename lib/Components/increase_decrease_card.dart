@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'variables.dart';
 
 class cardInDe extends StatefulWidget {
 
