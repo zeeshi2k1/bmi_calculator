@@ -2,8 +2,6 @@
 
 A new Flutter project.
 
-## Getting Started
-
 # Introduction
 The BMI (Body Mass Index) Calculator App is a mobile application designed to help users calculate their BMI and understand their body weight status. It provides a convenient way to assess whether their weight falls within a healthy range based on their height, weight, age, and gender.
 
