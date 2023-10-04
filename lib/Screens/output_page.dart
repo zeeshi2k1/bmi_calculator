@@ -47,6 +47,7 @@ class _OutputPageState extends State<OutputPage> {
                 padding:
                 const EdgeInsets.symmetric(vertical: 33, horizontal: 43),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
                       status,
